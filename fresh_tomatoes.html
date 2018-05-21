@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+<p>Movie Trailers</p>
+
+    <style>
+    .one,.two,.three,.four{
+    width:500px;
+    height:500px;
+    float:left;
+    margin-left:100px;
+    margin-top:20px;
+    padding:20px;
+  }
+  p{
+    color:darkmagenta;
+    background-color: greenyellow;
+    text-align:center;
+    font-size:30px;
+  }
+  img{ 
+        width:100%;
+        height:100%;
+       /* overflow: hidden;*/
+  }
+  .one:hover,.two:hover,.three:hover,.four:hover{
+    background-color:greenyellow;
+    padding:40px;
+    cursor:pointer;
+    border-radius: 20%;
+  }
+  .onit {
+    position: relative; 
+    bottom: 20px; 
+ /* Black see-through */
+    opacity:0;
+    color:darkmagenta;
+    font-size: 30px;
+    padding: 20px;
+    text-align:center;
+
+  }
+  .one:hover .onit ,.two:hover .onit,.three:hover .onit,.four:hover .onit{
+    opacity: 1;
+  }
+
+  .modal-footer button:hover{
+      background-color:red;
+  }
+  
+    </style>
+    <title>Movie Trailer</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="
+        crossorigin="anonymous">
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+</head>
+
+
+<div class="one" onclick=" change('aKijba1mkQU')">
+        <img src="http://igmedia.blob.core.windows.net/igmedia/telugu/gallery/movies/vinavayyaramayya/main.jpg"/>
+        <div class="onit">Vinnavayya Ramayya</div>
+    </div>
+    
+
+<div class="one" onclick=" change('6WgnE6J07e8')">
+        <img src="https://i0.wp.com/southreel.com/wp-content/uploads/2017/12/Akhil-Akkinenichiranjeevihello-event-in-hyderbadKalyani-Priyadarshantelugu-trailersAnup-RubensHELLO-USA-tourupcoming-telugu-movieslatest-telugu-movieslatest-telugu-trailersteaser-trailer-1.jpg?ssl=1"/>
+        <div class="onit">Hello</div>
+    </div>
+    
+
+<div class="one" onclick=" change('fRk86VZyJsU')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLH-mul-xxDqbwqrKCDl7J359ELLrdTfdrmM9si4E7fP9NpoEe"/>
+        <div class="onit">Charuseela</div>
+    </div>
+    
+
+<div class="one" onclick=" change('RnzQ1QC2VAg')">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.lIO5XdWY2CBqbvoUJ_uuvQAAAA&pid=15.1&P=0&w=300&h=300"/>
+        <div class="onit">Prema Kavali</div>
+    </div>
+    
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("#myModal").on("hidden.bs.modal", function () {
+                $("#iframeYoutube").attr("src", "#");
+            })
+        })
+        function change(video) {
+            var iframe = document.getElementById("iframeYoutube");
+            iframe.src = "https://www.youtube.com/embed/" + video;
+            $("#myModal").modal("show");
+        }
+    
+    </script>
+
+    <div class="modal fade" id="myModal" tabindex="-1"   aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal">&times;</button>
+                    </div>
+                    <iframe id="iframeYoutube" width="555" height="350" src="" frameborder="1"></iframe>
+
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
