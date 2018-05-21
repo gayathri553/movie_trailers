@@ -1,5 +1,4 @@
 print("Content-type:text/html \n")
-import re
 import os
 import webbrowser
 
