@@ -32,16 +32,8 @@ In this project floder I had mainly three files such as:
  #open_movies_page function:
    -which open the fresh_tomatoes.html page in browser
    -url path that we want to open the in browser.
-   
- #To run this file:
-    - I had  installed python
-    - I had installed  GitBash
-    - In that git Bash I had run some commands:
-          - git init
-          - git clone(which takes url that available in git resporitrary)
-          - git status
-          - git add -all
-          - git commit -m "adding"
-          - git push origin master.
-          
+ #To get the output of the file:
+    -We must run the entertainment_center.py this file will direct us to the browser.
+    -As the entertainment_center.py file have the function which direct to the fresh_tomatoes.py file.
+
   
